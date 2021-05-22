@@ -14,7 +14,8 @@
   <body>
     <!-- Так добавляются фрагменты в главные HTML-файлы страниц. -->
     <include src="./partials/example.html"></include>
-    <input type="text" placeholder="Введите страну" id="name-input" />
+    <input type="text" placeholder="Введите страну" id="name-input" name="query" />
+    <div class="card-container"></div>
 
     <!-- Скрипт идёт последним в разметке. В нём уже подключен главный SASS-файл. -->
     <script src="./index.js"></script>
