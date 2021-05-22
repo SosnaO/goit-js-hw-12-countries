@@ -1,4 +1,4 @@
-
+import { debounce } from 'lodash';
 
 //fetch('https://restcountries.eu/#api-endpoints-name')
 import './sass/main.scss';
@@ -12,24 +12,23 @@ const refs = {
 
 }
 console.log(refs.enterContainer)
+//const debounce = require('lodash.debounce');
 
-refs.enterContainer.addEventListener('input', onEnterContainer)
+refs.enterContainer.addEventListener('input', debounce(onEnterContainer,500));
+
 function onEnterContainer(event) {
   event.preventDefault();
   //const form = event.currentTarget;
-  const searchQuery = event.currentTarget.value;
+  const searchQuery = event.target.value;
 
+ console.log(searchQuery)
 
-
-
-  console.log(searchQuery)
-
-
-fetchCountries(searchQuery)
-.then(renderCountriesCard)
+  fetchCountries(searchQuery)
+    .then(renderCountriesCard)
     .catch(error => {
       console.log(error);
     });
+
 
   //refs.enterContainer.textContent = event.currentTarget.value;
 
