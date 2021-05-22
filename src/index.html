@@ -14,31 +14,12 @@
   <body>
     <!-- Так добавляются фрагменты в главные HTML-файлы страниц. -->
     <include src="./partials/example.html"></include>
-
     <input type="text" placeholder="Введите страну" id="name-input" />
-
-    <li>список от 2 до 10 стран</li>
-    <div class="card">
-      <div class="card-img">
-        <img src="" alt="{{}}" />
-      </div>
-
-      <div>
-        <h2 class="name-countries">{{name}}</h2>
-        <p class="capital">Capital:{{capital}}</p>
-        <p class="population">Population:{{population}}</p>
-        <p class="languages">  </p>
-          Languages:
-          {{#each languages}}
-            <li class ="list"> {{languages.name}}</li>
-          {{/each}}
-
-        </p>
-      </div>
-    </div>
 
     <!-- Скрипт идёт последним в разметке. В нём уже подключен главный SASS-файл. -->
     <script src="./index.js"></script>
     <script src="./fetchCountries.js"></script>
+
+    <script src="./countries.hbs"></script>
   </body>
 </html>

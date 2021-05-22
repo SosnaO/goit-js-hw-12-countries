@@ -1,0 +1,27 @@
+
+    {{!-- <li>список от 2 до 10 стран</li>
+    <div class="card">
+      <div class="card-img">
+
+      </div> --}}
+{{#each this}}
+      <div>
+        <h2 class="name-countries">{{name}}</h2>
+        <p class="capital">Capital:{{capital}}</p>
+        <p class="population">Population:{{population}}</p>
+        <p class="languages">  </p>
+          Languages:
+          <ul>
+          {{#each languages}}
+            <li class ="list"> {{this.name}}</li>
+
+          {{/each}}
+          </ul>
+
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-img">
+    </div>
+{{/each}}
