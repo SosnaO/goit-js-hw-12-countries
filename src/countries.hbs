@@ -1,9 +1,3 @@
-
-    {{!-- <li>список от 2 до 10 стран</li>
-    <div class="card">
-      <div class="card-img">
-
-      </div> --}}
 {{#each this}}
       <div>
         <h2 class="name-countries">{{name}}</h2>
@@ -14,12 +8,10 @@
           <ul>
           {{#each languages}}
             <li class ="list"> {{this.name}}</li>
-
           {{/each}}
           </ul>
-
         </p>
       </div>
-      <img class="flag-img" src="{{flag}}" width="300" height="400" alt="{{name}} flag">
+      <img class="flag-img" src="{{flag}}" width="300" height="200" alt="{{name}} flag">
     </div>
 {{/each}}
