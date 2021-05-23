@@ -53,7 +53,7 @@ function onEnterContainer(event) {
     })
 
     .catch(error => {
-        console.log("Error 404") ;
+      console.log("Error 404");
     });
 }
 function renderCountriesCard(name) {
