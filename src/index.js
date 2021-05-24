@@ -12,11 +12,11 @@ const refs = {
   enterContainer: document.querySelector('#name-input'),
 }
 refs.enterContainer.addEventListener('input', debounce(onEnterContainer,500));
-
 function onEnterContainer(event) {
   resetPage();
   event.preventDefault();
   const searchQuery = event.target.value;
+
   fetchCountries(searchQuery)
     .then(countries => {
       if (countries.length === 1) {
@@ -37,10 +37,13 @@ function onEnterContainer(event) {
       })
 
     .catch(onFetchError);
-   }
+}
+
   function renderCountriesCard(name) {
     const markup = CountriesTPL(name);
     refs.cardContainer.innerHTML = markup;
+    refs.enterContainer.value = '';
+
   }
   function renderCountriesList(name) {
     const markup = CountriesList(name);
