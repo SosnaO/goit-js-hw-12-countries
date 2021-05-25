@@ -15,7 +15,7 @@ refs.enterContainer.addEventListener('input', debounce(onEnterContainer,500));
 function onEnterContainer(event) {
   resetPage();
   event.preventDefault();
-  const searchQuery = event.target.value;
+  const searchQuery = event.target.value.trim();
 
   fetchCountries(searchQuery)
     .then(countries => {
